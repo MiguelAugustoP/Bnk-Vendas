@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Catálogo BNK</title>
+
+<link rel="stylesheet" href="catalogo.css">
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav id="menu">
+  <a href="#oversized" class="ativo">Oversized</a>
+  <a href="#calca">Calça jeans</a>
+  <a href="#conjuntos">Conjuntos</a>
+</nav>
+
+<!-- BOTÃO FIXO DO CARRINHO -->
+<div id="botaoCarrinho" onclick="toggleCarrinho()">
+  🛒 Ver Carrinho (R$ 0)
+</div>
+
+<!-- CARRINHO -->
+<div id="carrinho">
+  
+  <div class="topoCarrinho">
+    <h3>Seu Pedido</h3>
+    <button id="fecharCarrinho" onclick="toggleCarrinho()">✖</button>
+  </div>
+
+  <ul id="listaCarrinho"></ul>
+  <p id="total">Total: R$ 0</p>
+  
+  <button id="finalizarPedido">Finalizar Pedido</button>
+
+</div>
+
+<!-- CATEGORIA NIKE -->
+<section id="oversized" class="categoria">
+  <h2>Oversizeds</h2>
+
+  <div class="item">
+    <img src="imagens/jesus salva.jpeg">
+    <div>
+      <h3>Jesus Costas</h3>
+      <p>R$ 70</p>
+      <button onclick="addCarrinho('Jesus costas', 70)">Adicionar</button>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="imagens/Apredrejamento.jpeg">
+    <div>
+      <h3>Apedrejamento</h3>
+      <p>R$ 70</p>
+      <button onclick="addCarrinho('Apedrejamento', 70)">Adicionar</button>
+    </div>
+  </div>
+
+    <div class="item">
+    <img src="imagens/leão de juda.jpeg">
+    <div>
+      <h3>Leão de Juda</h3>
+      <p>R$ 70</p>
+      <button onclick="addCarrinho('leão de juda', 70)">Adicionar</button>
+    </div>
+  </div>
+
+   <div class="item">
+    <img src="imagens/Jesus não esta morto.jpeg">
+    <div>
+      <h3>Jesus não está morto</h3>
+      <p>R$ 70</p>
+      <button onclick="addCarrinho('Jesus não está morto', 70)">Adicionar</button>
+    </div>
+  </div>
+
+</section>
+
+<!-- CATEGORIA ADIDAS -->
+<section id="calca" class="categoria">
+  <h2>Calça jeans</h2>
+
+  <div class="item">
+    <img src="imagens/Calça Azul.png">
+    <div>
+      <h3>Calça Valentin jeans Azul</h3>
+      <p>R$ 80</p>
+      <button onclick="addCarrinho('Jeans Azul', 80)">Adicionar</button>
+    </div>
+  </div>
+
+   <div class="item">
+    <img src="imagens/Calça Preta.png">
+    <div>
+      <h3>Calça Valentin jeans Preta</h3>
+      <p>R$ 80</p>
+      <button onclick="addCarrinho('Jeans Preto', 80)">Adicionar</button>
+    </div>
+  </div>
+
+</section>
+
+<section id="conjuntos" class="categoria">
+  <h2>Conjuntos</h2>
+
+  <div class="item">
+    <img src="imagens/Conjunto Basico.png">
+    <div>
+      <h3>Conjunto Basico BNK</h3>
+      <p>R$ 130</p>
+      <button onclick="addCarrinho('Conjunto basico', 130)">Adicionar</button>
+    </div>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNK vendas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="loginModal" class="modal">
+
+  <div class="modal-content">
+    <span class="fechar" onclick="fecharLogin()">✖</span>
+
+    <!-- CADASTRO -->
+    <div id="cadastroBox">
+      <h2>Criar conta</h2>
+
+      <input type="text" placeholder="Nome">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Senha">
+
+      <button onclick="alert('Cadastro não implementado')">
+        Criar conta
+      </button>
+
+      <p class="troca" onclick="mostrarLogin()">
+        Já tem conta? Entrar
+      </p>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="loginBox" style="display: none;">
+      <h2>Entrar</h2>
+
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Senha">
+
+      <button onclick="alert('Login não implementado')">
+        Entrar
+      </button>
+
+      <p class="troca" onclick="mostrarCadastro()">
+        Não tem conta? Criar conta
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+
+<body>
+
+<header class="hero">
+    <div class="overlay">
+
+        <div class="topo">
+            <img src="imagens/logo bnk.jpg" alt="Logo" class="logo">
+
+            <nav>
+               <a href="#sobre">Sobre nós</a>
+               <a href="#contato">Fale conosco</a>
+               <a href="#" onclick="abrirLogin()">Login</a>
+            </nav>
+        </div>
+
+        <div class="text-box">
+            <h1>Bem vindo</h1>
+            <p>A melhor loja de roupas oversized Cristã</p>
+
+            <button onclick="window.location.href='produtos/catalogo.html'">
+                Ver produtos
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- SOBRE -->
+<section id="sobre" class="sobre">
+    <h2>Sobre nós</h2>
+
+    <p>A BNK é uma marca de roupas masculinas e femininas que une estilo oversized, qualidade e identidade.</p>
+
+    <p>Do streetwear com estampas cristãs até peças versáteis como jeans e cargo.</p>
+
+    <p>Cada detalhe é pensado para quem quer se destacar com propósito.</p>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="diferenciais">
+    <h2>Por que escolher a BNK?</h2>
+
+    <p>✔ Estilo oversized moderno</p>
+    <p>✔ Identidade cristã</p>
+    <p>✔ Qualidade e conforto</p>
+    <p>✔ Entrega para todo o brasil</p>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta">
+    <h2>Pronto para elevar seu estilo?</h2>
+
+    <button onclick="window.location.href='produtos/catalogo.html'">
+        Ver produtos
+    </button>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="sobre">
+    <h2>Fale conosco</h2>
+
+    <div class="redes-contato">
+
+        <a href="https://wa.me/5562993621335" target="_blank">
+            <img src="imagens/whatsapp.png" alt="WhatsApp">
+        </a>
+
+        <a href="https://instagram.com/bnk_vendas" target="_blank">
+            <img src="imagens/instagram.png" alt="Instagram">
+        </a>
+
+    </div>
+</section>
+
+<script src="landing.js"></script>
+
+</body>
+</html>
