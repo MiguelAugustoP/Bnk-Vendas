@@ -215,3 +215,48 @@ section {
 .troca:hover {
   color: white;
 }
+@media (max-width: 600px) {
+
+  /* LOGO */
+  .logo {
+    width: 70px;
+  }
+
+  /* MENU */
+  nav a {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* TEXTO PRINCIPAL */
+  .text-box h1 {
+    font-size: 32px;
+  }
+
+  .text-box p {
+    font-size: 16px;
+  }
+
+  /* BOTÃO HERO */
+  .text-box button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  /* SEÇÕES */
+  .sobre, .diferenciais, .cta {
+    padding: 60px 15px;
+  }
+
+  .sobre h2,
+  .diferenciais h2,
+  .cta h2 {
+    font-size: 26px;
+  }
+
+  .sobre p,
+  .diferenciais p {
+    font-size: 16px;
+  }
+
+}
