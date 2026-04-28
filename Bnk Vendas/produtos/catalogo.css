@@ -178,7 +178,11 @@ button {
   cursor: pointer;
 }
 @media (max-width: 768px) {
-
+    
+  button {
+    font-size: 16px;
+  }
+  
   .item {
     flex-direction: column; /* empilha imagem e texto */
     text-align: center;
@@ -191,6 +195,30 @@ button {
 
   .item div {
     margin-top: 10px;
+  }
+    /* TÍTULO DO PRODUTO */
+  .item h3 {
+    font-size: 18px;
+  }
+
+  /* PREÇO */
+  .item p {
+    font-size: 16px;
+  }
+
+  /* TEXTO DO CARRINHO */
+  #listaCarrinho li {
+    font-size: 16px;
+  }
+
+  /* TOTAL */
+  #total {
+    font-size: 18px;
+  }
+
+  /* TÍTULO DO CARRINHO */
+  .topoCarrinho h3 {
+    font-size: 20px;
   }
 
 }
