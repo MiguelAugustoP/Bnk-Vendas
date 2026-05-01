@@ -30,10 +30,16 @@ body {
 
 /* TOPO (LOGO + MENU) */
 .topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #222;
+  z-index: 1000;
 }
 
 .logo {
@@ -43,12 +49,8 @@ body {
 
 /* MENU */
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #222;
-  z-index: 1000;
-  justify-content: center;
+  display: flex;
+  gap: 25px;
 }
 
 nav a {
