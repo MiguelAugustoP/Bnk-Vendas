@@ -22,7 +22,7 @@ body {
 /* CAMADA ESCURA */
 .overlay {
     background: rgba(0, 0, 0, 0.6);
-    height: 100%;
+    height: 100vh;
     color: white;
     display: flex;
     flex-direction: column;
