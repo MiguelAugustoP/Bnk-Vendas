@@ -1,17 +1,32 @@
 let carrinho = [];
-let total = 0;
 
 /* ADICIONAR */
 function addCarrinho(nome, preco) {
-  carrinho.push({ nome, preco });
-  total += preco;
+  const itemExistente = carrinho.find(item => item.nome === nome);
+
+  if (itemExistente) {
+    itemExistente.qtd++;
+  } else {
+    carrinho.push({ nome, preco, qtd: 1 });
+  }
+
   atualizarCarrinho();
 }
 
-/* REMOVER */
-function removerItem(index) {
-  total -= carrinho[index].preco;
-  carrinho.splice(index, 1);
+/* AUMENTAR */
+function aumentar(index) {
+  carrinho[index].qtd++;
+  atualizarCarrinho();
+}
+
+/* DIMINUIR */
+function diminuir(index) {
+  carrinho[index].qtd--;
+
+  if (carrinho[index].qtd <= 0) {
+    carrinho.splice(index, 1);
+  }
+
   atualizarCarrinho();
 }
 
@@ -20,12 +35,22 @@ function atualizarCarrinho() {
   const lista = document.getElementById("listaCarrinho");
   lista.innerHTML = "";
 
+  let total = 0;
+  let totalItens = 0;
+
   carrinho.forEach((item, index) => {
+    total += item.preco * item.qtd;
+    totalItens += item.qtd;
+
     let li = document.createElement("li");
 
     li.innerHTML = `
-      <span>${item.nome} - R$ ${item.preco}</span>
-      <button onclick="removerItem(${index})">Remover</button>
+      <span>${item.nome} (${item.qtd}x) - R$ ${item.preco * item.qtd}</span>
+
+      <div>
+        <button onclick="diminuir(${index})">-</button>
+        <button onclick="aumentar(${index})">+</button>
+      </div>
     `;
 
     lista.appendChild(li);
@@ -34,7 +59,7 @@ function atualizarCarrinho() {
   document.getElementById("total").textContent = "Total: R$ " + total;
 
   document.getElementById("botaoCarrinho").textContent =
-    "🛒 Ver Carrinho (R$ " + total + ")";
+    "🛒 Ver Carrinho (" + totalItens + ") - R$ " + total;
 }
 
 /* ABRIR / FECHAR */
@@ -64,6 +89,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
+/* FINALIZAR */
 document.getElementById("finalizarPedido").addEventListener("click", () => {
 
   if (carrinho.length === 0) {
@@ -72,13 +98,14 @@ document.getElementById("finalizarPedido").addEventListener("click", () => {
   }
 
   let mensagem = "Pedido:\n\n";
+  let total = 0;
 
   carrinho.forEach(item => {
-    mensagem += `• ${item.nome} - R$ ${item.preco}\n`;
+    mensagem += `• ${item.nome} (${item.qtd}x) - R$ ${item.preco * item.qtd}\n`;
+    total += item.preco * item.qtd;
   });
 
   mensagem += `\nTotal: R$ ${total}`;
 
-  alert(mensagem); // por enquanto só mostra
-
+  alert(mensagem);
 });
