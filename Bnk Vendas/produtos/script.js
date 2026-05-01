@@ -1,5 +1,12 @@
 let carrinho = [];
 
+/* 🔥 CARREGAR CARRINHO SALVO */
+const carrinhoSalvo = localStorage.getItem("carrinhoBNK");
+
+if (carrinhoSalvo) {
+  carrinho = JSON.parse(carrinhoSalvo);
+}
+
 /* ADICIONAR */
 function addCarrinho(nome, preco) {
   const itemExistente = carrinho.find(item => item.nome === nome);
@@ -60,6 +67,9 @@ function atualizarCarrinho() {
 
   document.getElementById("botaoCarrinho").textContent =
     "🛒 Ver Carrinho (" + totalItens + ") - R$ " + total;
+
+  /* 🔥 SALVAR NO NAVEGADOR */
+  localStorage.setItem("carrinhoBNK", JSON.stringify(carrinho));
 }
 
 /* ABRIR / FECHAR */
@@ -109,3 +119,6 @@ document.getElementById("finalizarPedido").addEventListener("click", () => {
 
   alert(mensagem);
 });
+
+/* 🔥 ATUALIZA AO CARREGAR A PÁGINA */
+atualizarCarrinho();
