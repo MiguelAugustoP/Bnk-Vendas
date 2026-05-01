@@ -44,7 +44,8 @@ body {
 }
 
 .logo {
-    width: 100px;
+    width: 75px;
+    heigth: 75px;
     border-radius: 50%;
 }
 
