@@ -37,8 +37,8 @@ body {
 
   position: fixed;
   top: 0;
-  width: 100%;
-  background: #222;
+  width: 80%;
+  background: #111;
   z-index: 1000;
 }
 
