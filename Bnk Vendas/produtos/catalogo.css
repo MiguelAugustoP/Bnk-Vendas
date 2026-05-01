@@ -34,7 +34,7 @@ nav a.ativo {
 
 /* CATEGORIAS */
 .categoria {
-  padding: 80px 20px 100px; /* espaço extra por causa do botão */
+  padding: 80px 20px 100px;
 }
 
 .categoria h2 {
@@ -49,12 +49,14 @@ nav a.ativo {
   padding: 10px;
   border-radius: 10px;
   align-items: center;
+  gap: 10px;
 }
+
 .item div {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centraliza vertical */
-  align-items: center;     /* centraliza horizontal */
+  justify-content: center;
+  align-items: center;
   text-align: center;
   flex: 1;
 }
@@ -79,7 +81,7 @@ button {
   width: 200px;
   height: 30px;
   padding: 6px 10px;
-  border: 20px;
+  border: none;
   border-radius: 10px;
   background: purple;
   color: white;
@@ -100,7 +102,7 @@ button {
   z-index: 1000;
 }
 
-/* GAVETA DO CARRINHO */
+/* CARRINHO */
 #carrinho {
   position: fixed;
   bottom: -100%;
@@ -112,21 +114,19 @@ button {
   padding: 20px;
   transition: 0.3s;
   z-index: 1001;
-  overflow-y: auto; /* IMPORTANTE */
+  overflow-y: auto;
 }
 
 #carrinho.ativo {
   bottom: 0;
 }
 
-/* TOPO */
 .topoCarrinho {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* BOTÃO FECHAR */
 #fecharCarrinho {
   background: red;
   color: white;
@@ -138,14 +138,12 @@ button {
   cursor: pointer;
 }
 
-/* LISTA */
 #listaCarrinho {
   margin-top: 15px;
   padding: 0;
   list-style: none;
 }
 
-/* ITEM DO CARRINHO */
 #listaCarrinho li {
   display: flex;
   justify-content: space-between;
@@ -156,7 +154,6 @@ button {
   border-radius: 8px;
 }
 
-/* BOTÃO REMOVER */
 #listaCarrinho button {
   background: red;
   border: none;
@@ -165,6 +162,7 @@ button {
   margin-left: 10px;
   cursor: pointer;
 }
+
 #finalizarPedido {
   width: 100%;
   margin-top: 15px;
@@ -177,48 +175,82 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* 📱 MOBILE (foco em tela em pé) */
 @media (max-width: 768px) {
-    
-  button {
-    font-size: 16px;
-  }
-  
+
+  /* mantém lado a lado */
   .item {
-    flex-direction: column; /* empilha imagem e texto */
-    text-align: center;
+    flex-direction: row;
+    padding: 15px;
   }
 
+  /* imagem menor pra liberar espaço */
   .item img {
-    width: 100%;
-    height: auto;
+    width: 100px;
+    height: 100px;
   }
 
+  /* texto alinhado à esquerda (melhor leitura) */
   .item div {
-    margin-top: 10px;
+    align-items: flex-start;
+    text-align: left;
   }
-    /* TÍTULO DO PRODUTO */
+
+  /* TEXTO */
   .item h3 {
     font-size: 18px;
   }
 
-  /* PREÇO */
   .item p {
     font-size: 16px;
   }
 
-  /* TEXTO DO CARRINHO */
-  #listaCarrinho li {
+  /* BOTÃO PRODUTO */
+  button {
+    width: 100%;
+    height: 45px;
     font-size: 16px;
   }
 
-  /* TOTAL */
-  #total {
-    font-size: 18px;
+  /* MENU */
+  nav a {
+    font-size: 14px;
+    padding: 12px;
   }
 
-  /* TÍTULO DO CARRINHO */
+  /* CARRINHO */
+  #botaoCarrinho {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  #listaCarrinho li {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  #listaCarrinho button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  #finalizarPedido {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  #fecharCarrinho {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
   .topoCarrinho h3 {
     font-size: 20px;
   }
 
+  #total {
+    font-size: 18px;
+  }
 }
