@@ -95,7 +95,7 @@ nav a {
 }
 
 .cards-principais {
-  display: flex;
+  display: column;
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
