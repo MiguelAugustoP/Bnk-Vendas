@@ -304,5 +304,19 @@ section {
   .sobre-container img {
     width: 100%;
   }
+      .cards-principais {
+    flex-direction: column;
+    align-items: center;
+  }
+
+.card {
+    width: 100%;
+    max-width: 300px;
+  }
+    
+.modal-content {
+    width: 90%;
+    margin: 100px auto;
+  }
 
 }
