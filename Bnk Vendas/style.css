@@ -8,7 +8,7 @@ html {
 }
 body {
     font-family: sans-serif;
-      padding-top: 70px;
+      padding-top: 90px;
 }
 
 /* HERO (IMAGEM DE FUNDO) */
@@ -34,10 +34,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  width: 100vw;
   background: #111;
   z-index: 1000;
 }
@@ -263,8 +263,8 @@ section {
 @media (max-width: 768px) {
 
   .hero {
-    height: auto;
-    padding: 120px 20px 80px;
+  min-height: 100vh;
+  padding: 120px 20px 80px;
   }
 
   .text-box h1 {
