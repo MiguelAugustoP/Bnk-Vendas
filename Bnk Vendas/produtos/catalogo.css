@@ -137,6 +137,7 @@ button {
   height: 35px;
   font-size: 18px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 #listaCarrinho {
