@@ -267,9 +267,10 @@ section {
   min-height: 100vh;
   padding: 120px 20px 80px;
   }
+    
  nav a {
   font-size: 14px;
-  padding: 10px;
+  padding: 5px;
 }
 
   .text-box h1 {
