@@ -305,7 +305,7 @@ section {
     width: 100%;
   }
       .cards-principais {
-    flex-direction: column;
+  flex-direction: column !important;
     align-items: center;
   }
 
