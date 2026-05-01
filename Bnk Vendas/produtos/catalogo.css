@@ -15,6 +15,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  heigth: 80%;
   display: flex;
   overflow-x: auto;
   background: #222;
@@ -96,7 +97,7 @@ button {
   background: purple;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   font-weight: bold;
   cursor: pointer;
   z-index: 1000;
@@ -221,8 +222,8 @@ button {
 
   /* CARRINHO */
   #botaoCarrinho {
-    font-size: 20px;
-    padding: 20px;
+    font-size: 25px;
+    padding: 30px;
   }
 
   #listaCarrinho li {
