@@ -147,6 +147,11 @@ button {
   list-style: none;
 }
 
+#listaCarrinho div {
+  display: flex;
+  gap: 5px;
+}
+
 #listaCarrinho li {
   display: flex;
   justify-content: space-between;
@@ -158,6 +163,8 @@ button {
 }
 
 #listaCarrinho button {
+  width: 35px;
+  height: 35px;
   background: red;
   border: none;
   border-radius: 5px;
